@@ -21,7 +21,9 @@ public class PortsPage {
     @FindBy(xpath = "//div[@style='z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);']")
     public WebElement locationOfThePort;
     @FindBy(xpath = "//div[@id='ports-map']//div[@id='map-key']//li[1]")
-    public WebElement departure;
+   public WebElement departure;
+
+
 
 }
 
