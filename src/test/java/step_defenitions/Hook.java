@@ -1,16 +1,12 @@
 package step_defenitions;
 
-
 import Utilities.ConfigurationReader;
 import Utilities.Driver;
-
-
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import java.util.concurrent.TimeUnit;
 
 public class Hook {

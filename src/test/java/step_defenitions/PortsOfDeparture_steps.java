@@ -9,8 +9,7 @@ import Utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.openqa.selenium.Point;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -18,7 +17,6 @@ import static org.junit.Assert.assertEquals;
 
 
 public class PortsOfDeparture_steps {
-    private static final Logger logger = LogManager.getLogger();
     HomePage homePage = new HomePage();
     PortsPage portsPage = new PortsPage();
 
@@ -68,17 +66,15 @@ public class PortsOfDeparture_steps {
 
     @Then("Port is on the middle of the map")
     public void port_is_on_the_middle_of_the_map() {
-        Point portLocation =portsPage.locationOfThePort.getLocation();
-        assertEquals(portLocation,portsPage.locationOfThePort.getLocation());
+        Point portLocation = portsPage.locationOfThePort.getLocation();
+        assertEquals(portLocation, portsPage.locationOfThePort.getLocation());
 
     }
 
-    @Then("Port displayed as {string}")
-    public void port_displayed_as(String departurePort) {
-        assertEquals(departurePort,portsPage.departure.getText());
+    @Then("Port displayed as Port Of Departure")
+    public void port_displayed_as_Port_Of_Departure() {
 
-
-
+        assertEquals(portsPage.actDeparture.getTagName(), portsPage.expDeparture.getTagName());
     }
 
 

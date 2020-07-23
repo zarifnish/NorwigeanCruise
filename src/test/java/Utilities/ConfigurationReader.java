@@ -6,10 +6,10 @@ import java.util.Properties;
 public class ConfigurationReader {
 
     private static Properties configFile;
+
     static {
         try {
             //path to our .properties file
-            //MIGHT BE WRONG PATH HERE, PAY ATTENTION
             String path = "configuration.properties";
             //we create object of input stream to access file
             System.out.println(path);
@@ -21,11 +21,12 @@ public class ConfigurationReader {
             configFile.load(input);
             //close input stream
             input.close();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public static String getProperty(String key){
+
+    public static String getProperty(String key) {
         return configFile.getProperty(key);
     }
 
